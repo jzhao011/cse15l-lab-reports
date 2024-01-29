@@ -37,6 +37,7 @@ class ChatServer {
 ```
 
 **Using Add Message**
+
 ![Image](/images/add-message-1.png)
 
 Searching the url calls the ```handleRequest``` function in the code.
@@ -45,7 +46,6 @@ The relevant argument to this function is ```url```, a ```URI``` object that rep
 The class also has a relevant value, ```String s```. Before the method was called, this had a value of ```"jesse: Hi\njohn: Hey\n"```.
 
 After running the method, the value ```String s``` changed. It got updated to ```"jesse: Hi\njohn: Hey\njohn: How are you\n"```.
-
 
 ![Image](/images/add-message-2.png)
 
@@ -59,16 +59,19 @@ After running the method, ```String s``` got updated to ```"jesse: Hi\njohn: Hey
 ## Part 2
 
 **Path to Private Key**
+
 ![Image](/images/keyabsolutepath.png)
 
 The path is ```/Users/jesse/.ssh/id_rsa```
 
 **Path to Public Key**
+
 ![Image](/images/publickeyabsolutepath.png)
 
 The path is ```/home/linux/ieng6/oce/3g/jez011/.ssh/authorized_keys```
 
 **Passwordless SSH connection**
+
 ![Image](/images/passwordlesslogin.png)
 
 ## Part 3
