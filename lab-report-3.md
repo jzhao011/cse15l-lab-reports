@@ -211,6 +211,8 @@ technical/government/Gen_Account_Office/gg96118.txt-the agency's funding. Custom
 
 I tagged this `grep` command with `-C 5`, so it gave me five lines of context around instances of "North American Free Trade Agremeent". Again, it is helpful to see what your files are generally saying about the keyword.
 
+Found using `man grep`.
+
 **`grep -w`**
 
 The `-w` flag ensures that the pattern only matches whole words. 
@@ -268,6 +270,8 @@ technical/biomed/1471-2261-2-11.txt:          The infra-renal aorta of 5 mm long
 ```
 Similarly, this usage ensured that only instances where "infra" was used as a word was brought up. That way, I don't have to look at words like "infrastructure" or "infrared" and look at only "infra".
 
+Found using `man grep`.
+
 **`grep -n`**
 
 The `-n` flag makes it so that output lines are labeled with their respective line numbers in the file.
@@ -293,3 +297,4 @@ technical/911report/chapter-8.txt:309:                President George W. Bush o
 ```
 Again, it tells me what line numbers the lines are on. This is especially helpful when its really deep in the text, like some examples here. It would take forever to find something on line 1239 manually, but since it tells you, you can find it really quickly.
 
+Found using `man grep`.
