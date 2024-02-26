@@ -28,21 +28,21 @@ Keys Pressed: `<up> <up> <up> <up> <up> <up> <enter>`, `<up> <up> <up> <up> <up>
 
 Keys Pressed: v i m `<Space>` L `<Tab>` . `<Tab> <Enter>`. I typed "vim L" and pressed `<Tab>` to autocomplete. Since there are four files in the directory that start with "L", `ListExamples.class`, `ListExamples.java`, `ListExamplesTests.class`, and `ListExamplesTests.java`, it autocompletes to the longest shared substring that starts from the beginning and we get `vim ListExamples`. To distinguish the `ListExamples.java` file, I add a period and press `<Tab>` again. This autocompletes the command to `vim ListExamples.java`. Curiously, it never autocompletes to the `.class` file, even if you try autocompleting `vim ListExamples.c`. I am not completely sure why that is, but one possible reason could be because `vim` knows that a `.class` file is not something the user would need to edit as plain text. As such, even though the `.class` file also fits `ListExamples.`, it autocompletes to the `.java` file instead.
 
-Keys Pressed: : 4 4 `<Enter>` e r 2 `<Esc>` : x `<Enter>`. Typing the colon brings vim to Command Mode, and typing '44' and hitting <Enter> brings the cursor to the 44th line.
+Keys Pressed: : 4 4 `<Enter>` e r 2 `<Esc>` : x `<Enter>`. Typing the colon brings vim to Command Mode, and typing '44' and hitting <Enter> brings the cursor to the 44th line. Pressing 'e' then takes the cursor to the next end of a word. Here, it brings it to the '1' of `index1`. Pressing 'r' once lets you replace the character your cursor is currently on. I press '2' to replace the '1', changing the variable to the correct one: `index2`. Since I am now in insert mode, I press `<Esc>` to return to normal mode and ':' to enter command mode. I press 'x' to write and quit, and execute the command.
 
 ## Run tests, demonstrating they succeed
 
 ![Image](/images/runtestsdemonsratesuccess.png)
 
-`<up> <up> <up> <enter>`, `<up> <up> <up> <enter>
+Keys Pressed: `<up> <up> <up> <enter>`, `<up> <up> <up> <enter>`. I've executed two more commands since the last `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`, so I press `<up>` three times to access it. After executing it, the next command, `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamples.java`, is also three commands up so I do the same thing to access and execute it.
 
 ## commit and push changes
 
 ![Image](/images/commitandpush.png)
 
-g i t `<Space>` a d d `<Space> <tab> <enter>`
+Keys Pressed: g i t `<Space>` a d d `<Space> <tab> <enter>`. I type "git add " and press `<Tab>`. Since the only file that was changed is `ListExamples.java`, it autocompletes the command to `git add ListExamples.java`. I press `<Enter>` to stage the changes.
 
-g i t `<Space>` c o m `<tab>` - m ' F i x `<Space>` L i s t E x a m p l e s . j a v a '
+Keys Pressed: g i t `<Space>` c o m `<tab>` - m ' F i x `<Space>` L i s t E x a m p l e s . j a v a '. I type "git com" and press `<Tab>` to autcomplete the command to 'git commit'. I add the '-m' flag and type my commit message to get "git commit -m 'Fix ListExamples.java'". I then press `<Enter>` to commit the changes with the message.
 
-g i t `<Space>` p u s h `<Enter>`
+Keys Pressed: g i t `<Space>` p u s h `<Enter>`. Nothing fancy here. I type "git push" and hit `<Enter>` to push my commit to the remote repository.
 
